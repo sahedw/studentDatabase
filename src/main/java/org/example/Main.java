@@ -21,7 +21,7 @@ public class Main {
 
         // System.out.println(tom.getName());
 
-        // System.out.println(database.getAllStudents());
+         System.out.println(database.getAllStudents());
 
         System.out.println(database.toString());
 
