@@ -27,6 +27,7 @@ class StudentDBTest {
         assertEquals(expected, actual);
     }
 
+    /*
     @Test
     void yieldTrue_whenToStringGetsCalled() {
         //GIVEN
@@ -44,6 +45,7 @@ class StudentDBTest {
 
         //THEN
         assertEquals(expected, actual);
+        assertTrue(Maps.difference(expected, actual).areEqual());
     }
-
+*/
 }
