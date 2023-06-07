@@ -23,7 +23,7 @@ public class Main {
 
         // System.out.println(database.getAllStudents());
 
-        // System.out.println(database.toString());
+        System.out.println(database.toString());
 
         System.out.println(database.randomStudent());
 
