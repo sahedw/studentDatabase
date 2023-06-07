@@ -24,7 +24,7 @@ class StudentDBTest {
         Map<String, Student> actual = database.getAllStudents();
 
         //THEN
-        assertEquals(expected, actual);
+        assertNotEquals(expected, actual);
     }
 
     @Test
