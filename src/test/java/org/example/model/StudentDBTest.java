@@ -11,20 +11,31 @@ class StudentDBTest {
     @Test
     void yieldTrue_whenGetAllStudentsGetsCalled() {
         //GIVEN
-        Student tom = new Student("Tom", "1");
-        Student steven = new Student("Steven", "2");
-        Student julian = new Student("Julian", "3");
-        Student marc = new Student("Marc", "4");
 
-        Map<String, Student> mapOfStudents = new HashMap<>(Map.of("Tom", tom, "Steven", steven, "Julian", julian, "Marc", marc));
-        StudentDB database = new StudentDB(mapOfStudents);
+        StudentDB database = new StudentDB();
 
         //WHEN
-        Map<String, Student> expected = new HashMap<>(Map.of("Tom", tom, "Steven", steven, "Julian", julian, "Marc", marc));
-        Map<String, Student> actual = database.getAllStudents();
+        List<Student> expected = new ArrayList<>(List.of(
+                new Student("Elias", "1"),
+                new Student("Sharoz", "2"),
+                new Student("Sahed", "3")
+        ));
+        List<Student> actual = database.getAllStudents();
 
         //THEN
-        assertEquals(expected, actual);
+        assertEquals(expected.toString(), actual.toString());
+    }
+
+    @Test
+    void yieldTrue_whenFindByIdWith2() {
+        StudentDB database = new StudentDB();
+
+        Student expected = new Student("Sharoz", "2");
+
+        Student actual = database.findById("2");
+
+        assertEquals(expected.toString(), actual.toString());
+
     }
 
     /*
